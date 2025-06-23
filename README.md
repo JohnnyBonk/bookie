@@ -101,7 +101,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Material Icons by Google
 - Chrome Extensions documentation and examples
-
----
-
-Made with ❤️ by [Your Name]
