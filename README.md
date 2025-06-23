@@ -23,7 +23,7 @@ A nice little lightweight Chrome extension to help you manage your bookmarks wit
 
 1. Download or clone this repository
    ```bash
-   git clone https://github.com/yourusername/full-bookmark-folders.git
+   git clone https://github.com/JohnnyBonk/bookie.git
    ```
 
 2. Open Chrome and navigate to `chrome://extensions/`
@@ -32,7 +32,7 @@ A nice little lightweight Chrome extension to help you manage your bookmarks wit
 
 4. Click "Load unpacked" and select the extension directory
 
-5. The Full Bookmark Folders icon will appear in your Chrome toolbar
+5. The Bookie icon will appear in your Chrome toolbar
 
 ## Usage
 
@@ -77,7 +77,7 @@ This extension requires the following permissions:
 
 ## Privacy
 
-Full Bookmark Folders operates entirely locally. No data is sent to external servers. Your bookmarks remain private and secure within your browser.
+Bookie operates entirely locally. No data is sent to external servers. Your bookmarks remain private and secure within your browser.
 
 ## Contributing
 
@@ -91,7 +91,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Support
 
-If you encounter any issues or have suggestions, please [open an issue](https://github.com/yourusername/full-bookmark-folders/issues).
+If you encounter any issues or have suggestions, please [open an issue](https://github.com/JohnnyBonk/bookie/issues).
 
 ## License
 
