@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Full Bookmark Folders",
+  "version": "1.0",
+  "description": "Shows all bookmark folders when adding a bookmark",
+  "permissions": [
+    "bookmarks",
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; script-src 'self'"
+  },
+  "web_accessible_resources": [{
+    "resources": ["images/*"],
+    "matches": ["<all_urls>"]
+  }]
+}

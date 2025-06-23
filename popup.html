@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Full Bookmark Folders</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <!-- Content Security Policy for extension security -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com;">
+  <!-- Material Icons for UI elements -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header with theme toggle and search -->
+  <div class="header">
+    <div class="theme-toggle">
+      <span class="material-icons" id="theme-icon">dark_mode</span>
+    </div>
+    <div class="search-bar">
+      <button id="search-toggle" title="Search bookmarks">
+        <span class="material-icons">search</span>
+      </button>
+      <input type="text" id="search" placeholder="Search..." class="collapsed">
+    </div>
+    <!-- Statistics display -->
+    <div class="header-stats" id="header-stats" style="margin-left:auto; font-size:14px; color:var(--text-secondary); font-weight:500;"></div>
+  </div>
+
+  <!-- Main content area with inputs and folder tree -->
+  <div class="main-content">
+    <input type="text" id="title" placeholder="Title" class="compact-input">
+    <input type="text" id="url" placeholder="URL" class="compact-input">
+
+    <!-- Action Buttons Area -->
+    <div class="action-buttons-container">
+      <!-- Primary actions: Save, Add Folder, Move -->
+      <div class="button-group primary-actions">
+        <button id="save" class="icon-btn" title="Save Bookmark" disabled>
+          <span class="material-icons">bookmark_add</span>
+        </button>
+        <button id="add-folder" class="icon-btn" title="Add Folder">
+          <span class="material-icons">create_new_folder</span>
+        </button>
+         <button id="move-to" class="icon-btn" title="Move to">
+          <span class="material-icons">drive_file_move</span>
+        </button>
+      </div>
+      <!-- Secondary actions: Select, Rename, Delete -->
+      <div class="button-group secondary-actions">
+         <button id="select-mode" class="icon-btn" title="Select multiple">
+          <span class="material-icons">select_all</span>
+        </button>
+        <button id="rename" class="icon-btn" title="Rename">
+          <span class="material-icons">edit</span>
+        </button>
+        <button id="delete" class="icon-btn" title="Delete">
+          <span class="material-icons">delete</span>
+        </button>
+      </div>
+      <!-- Tertiary actions: Export -->
+      <div class="button-group tertiary-actions">
+         <button id="export" class="icon-btn" title="Export bookmarks">
+          <span class="material-icons">download</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Folder tree container -->
+    <div class="folder-tree" id="folders"></div>
+  </div>
+
+  <!-- Context menu for right-click actions -->
+  <div id="context-menu" class="context-menu">
+    <div class="menu-item" data-action="open">
+      <span class="material-icons">open_in_new</span>
+      Open
+    </div>
+    <div class="menu-item" data-action="rename">
+      <span class="material-icons">edit</span>
+      Rename
+    </div>
+    <div class="menu-item" data-action="move">
+      <span class="material-icons">drive_file_move</span>
+      Move to
+    </div>
+    <div class="menu-item" data-action="delete">
+      <span class="material-icons">delete</span>
+      Delete
+    </div>
+    <div class="menu-item" data-action="export">
+      <span class="material-icons">download</span>
+      Export
+    </div>
+  </div>
+
+  <!-- Export modal dialog -->
+  <div id="export-modal" class="modal">
+    <div class="modal-content">
+      <h3>Export Bookmarks</h3>
+      <div class="export-options">
+        <label>
+          <input type="radio" name="format" value="html" checked>
+          HTML (Browser Compatible)
+        </label>
+        <label>
+          <input type="radio" name="format" value="json">
+          JSON
+        </label>
+        <label>
+          <input type="radio" name="format" value="csv">
+          CSV
+        </label>
+      </div>
+      <div class="modal-actions">
+        <button id="export-cancel">Cancel</button>
+        <button id="export-confirm">Export</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main extension script -->
+  <script src="popup.js"></script>
+</body>
+</html>
