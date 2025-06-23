@@ -1,6 +1,6 @@
-# Full Bookmark Folders
+# Bookie
 
-A powerful Chrome extension that enhances your bookmark management experience with advanced folder navigation, search capabilities, and bulk operations.
+A nice little lightweight Chrome extension to help you manage your bookmarks with easy folder navigation and search.
 
 ## Features
 
